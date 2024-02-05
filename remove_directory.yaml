@@ -1,0 +1,25 @@
+---
+name: remove_directory
+pack: myst2
+description: Remove a directory on a remote Linux server
+enabled: true
+entry_point: /opt/stackstorm/packs/myst2/actions/remove_directory.py
+runner_type: python-script
+parameters:
+  hostname:
+    description: 13.201.26.97
+    type: string
+    required: true
+  username:
+    description: ec2-user
+    type: string
+    required: true
+  private_key_path:
+    description: /root/id_rsa
+    type: string
+    required: true
+  directory_path:
+    description: /tmp/test/sample.txt
+    type: string
+    required: true
+
